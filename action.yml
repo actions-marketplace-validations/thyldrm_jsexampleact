@@ -1,18 +1,6 @@
 name: 'Hello CodeThreat'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: false
-    default: 'World'
-  password:  # id of input
-    description: 'password'
-    required: false
-    default: ''
-  username:  # id of input
-    description: 'username'
-    required: false
-    default: ''
   ACCESS_TOKEN:  # id of input
     description: 'ACCESSTOKEN'
     required: true
