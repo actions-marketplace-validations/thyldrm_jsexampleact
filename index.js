@@ -20,6 +20,12 @@ try {
   console.log("----------------------")
   console.log("----------------------")
   console.log(token);
+
+  const token1 = process.env.ACCESS_TOKEN;
+  console.log("----------------------")
+  console.log("----------------------")
+  console.log("----------------------")
+  console.log(token1);
 } catch (error) {
   core.setFailed(error.message);
 }
