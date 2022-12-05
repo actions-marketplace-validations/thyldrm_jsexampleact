@@ -3,8 +3,8 @@ const github = require('@actions/github');
 
 try {
   // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
   const token = core.getInput('ACCESS_TOKEN');
+  const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
@@ -12,6 +12,10 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
   console.log(github);
+  console.log("----------------------")
+  console.log("----------------------")
+  console.log("----------------------")
+  console.log(nameToGreet);
   console.log("----------------------")
   console.log("----------------------")
   console.log("----------------------")
