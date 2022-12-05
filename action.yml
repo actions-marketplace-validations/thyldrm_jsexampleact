@@ -7,10 +7,14 @@ inputs:
     default: 'World'
   password:  # id of input
     description: 'password'
-    required: true
+    required: false
     default: ''
   username:  # id of input
     description: 'username'
+    required: false
+    default: ''
+  ACCESS_TOKEN:  # id of input
+    description: 'ACCESSTOKEN'
     required: true
     default: ''
 outputs:
