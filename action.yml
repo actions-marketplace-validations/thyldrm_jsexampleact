@@ -3,8 +3,16 @@ description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
-    required: true
+    required: false
     default: 'World'
+  password:  # id of input
+    description: 'password'
+    required: true
+    default: ''
+  username:  # id of input
+    description: 'username'
+    required: true
+    default: ''
 outputs:
   time: # id of output
     description: 'The time we greeted you'
