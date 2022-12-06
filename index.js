@@ -20,7 +20,7 @@ try {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
       "x-ct-organization": "codethreat",
-      "Authorization": token1
+      "Authorization": `${token1}`
     },
   })
   .then(({data}) => {
