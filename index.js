@@ -22,7 +22,7 @@ try {
   const b64uidpss = btoa(`${USERNAME}:${PASSWORD}`);
   const authorization = `Basic ${b64uidpss}`;
   axios
-  .get("http://localhost:3000/api/users", {
+  .get("http://dev.codethreat.com:8080/api/users", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
