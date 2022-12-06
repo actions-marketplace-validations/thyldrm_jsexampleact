@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const axios = require("axios");
 
 try {
   const token = core.getInput('ACCESS_TOKEN');
@@ -13,6 +14,18 @@ try {
   console.log("----------------------")
   console.log("----------------------")
   console.log(token1);
+  axios
+  .get("http://localhost:3000/api/users", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+      "x-ct-organization": "codethreat",
+      "Authorization": token1
+    },
+  })
+  .then(({data}) => {
+    console.log(data);
+});
 } catch (error) {
   core.setFailed(error.message);
 }
