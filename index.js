@@ -1,9 +1,11 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const LOCALHOST_IP = process.env.LOCALHOST_IP;
 const axios = require("axios");
 
 try {
   const token = core.getInput('ACCESS_TOKEN');
+  
 
   //const payload = JSON.stringify(github.context.payload, undefined, 2)
  
@@ -15,7 +17,7 @@ try {
   console.log("----------------------")
   console.log(token1);
   axios
-  .get("http://localhost:3000/api/users", {
+  .get(`http://${LOCALHOST_IP}:3000/api/users`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
