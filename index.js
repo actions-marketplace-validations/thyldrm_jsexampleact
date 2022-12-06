@@ -22,12 +22,12 @@ try {
   const b64uidpss = btoa(`${USERNAME}:${PASSWORD}`);
   const authorization = `Basic ${b64uidpss}`;
   axios
-  .post(`https://dev.codethreat.com/signin`, {
+  .get("http://localhost:3000/api/users", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
       "x-ct-organization": "codethreat",
-      "Authorization": `${authorization}`
+      "Authorization": `${token1}`
     },
   })
   .then(({data}) => {
