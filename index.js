@@ -32,7 +32,7 @@ try {
 const payload = JSON.stringify(github.context.payload.repository.name)
   console.log(`The event payload: ${payload}`);
 //   console.log(`NAMEEE: ${payload.repository.name}`);
-//   console.log("eyyy " + github.context.payload.repository.name);
+ console.log("eyyy " + github.context.payload.repository.name);
 } catch (error) {
   core.setFailed(error.message);
 }
