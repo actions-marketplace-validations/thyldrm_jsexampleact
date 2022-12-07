@@ -12,7 +12,7 @@ try {
         "Authorization": `${token1}`
       },
     method: 'post',
-    url: 'https://501e-78-189-89-238.eu.ngrok.io/integration/github/start',
+    url: 'https://501e-78-189-89-238.eu.ngrok.io/api/integration/github/start',
     data: {
       project: github.context.payload.repository.name,
       branch: github.context.payload.pull_request.head.ref,
