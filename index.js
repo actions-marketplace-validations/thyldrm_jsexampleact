@@ -45,7 +45,7 @@ try {
 //     console.log(data);
 // });
 
-axios.post('https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start', {
+axios.post('https://d41f-176-236-105-2.eu.ngrok.io/api/integration/github/start', {
     project: github.context.payload.repository.name,
     branch: github.context.payload.pull_request.head.ref,
     account : github.context.payload.pull_request.head.repo.owner,
