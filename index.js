@@ -4,6 +4,7 @@ const axios = require("axios");
 
 try {
   const token1 = process.env.ACCESS_TOKEN;
+  const githubtoken = process.env.GITHUB_TOKEN;
 //   const options = {
 //     headers: {
 //         Accept: "application/json",
@@ -49,7 +50,8 @@ axios.post('https://d41f-176-236-105-2.eu.ngrok.io/api/integration/github/start'
     project: github.context.payload.repository.name,
     branch: github.context.payload.pull_request.head.ref,
     account : github.context.payload.pull_request.head.repo.owner,
-    type: "action"
+    type: "action",
+    githubtoken: githubtoken,
 }, {
   headers: {
     'Authorization': `${token1}`,
@@ -80,7 +82,7 @@ axios.post('https://d41f-176-236-105-2.eu.ngrok.io/api/integration/github/start'
 const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
  console.log("eyyy " + github.context.payload.repository.name);
- console.log("pr " + github.context.payload.pull_request.head.ref);
+ console.log("pr " + github.context.payload.pull_request?.head.ref);
 } catch (error) {
   core.setFailed(error.message);
 }
