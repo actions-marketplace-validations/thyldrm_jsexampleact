@@ -34,6 +34,17 @@ axios
     console.log(data);
 });
 
+axios
+  .post("https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start", {
+    headers: {
+      "x-ct-organization": "codethreat",
+      "Authorization": `${token1}`
+    },
+  })
+  .then(({data}) => {
+    console.log(data);
+});
+
 
 //   axios
 //   .post("https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start", {
