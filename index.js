@@ -29,7 +29,7 @@ try {
 //   .then(({data}) => {
 //     console.log(data);
 // });
-const payload = JSON.stringify(github.context.payload.name)
+const payload = JSON.stringify(github.context.payload.repository.name)
   console.log(`The event payload: ${payload}`);
 //   console.log(`NAMEEE: ${payload.repository.name}`);
 //   console.log("eyyy " + github.context.payload.repository.name);
