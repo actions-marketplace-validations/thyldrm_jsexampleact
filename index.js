@@ -23,26 +23,43 @@ try {
 //     console.log(data);
 // });
 
-axios
-  .get("https://4ebb-176-236-105-2.eu.ngrok.io/api/users", {
-    headers: {
-      "x-ct-organization": "codethreat",
-      "Authorization": `${token1}`
-    },
-  })
-  .then(({data}) => {
-    console.log(data);
-});
+// axios
+//   .get("https://4ebb-176-236-105-2.eu.ngrok.io/api/users", {
+//     headers: {
+//       "x-ct-organization": "codethreat",
+//       "Authorization": `${token1}`
+//     },
+//   })
+//   .then(({data}) => {
+//     console.log(data);
+// });
 
-axios
-  .post("https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start", {
-    headers: {
-      "x-ct-organization": "codethreat",
-      "Authorization": `${token1}`
-    },
-  })
-  .then(({data}) => {
-    console.log(data);
+// axios
+//   .post("https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start", {
+//     headers: {
+//       "x-ct-organization": "codethreat",
+//       "Authorization": `${token1}`
+//     },
+//   })
+//   .then(({data}) => {
+//     console.log(data);
+// });
+
+axios.post('https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start', {
+  body: {
+    project: 'Some value'
+  }
+}, {
+  headers: {
+    'Authorization': `${token1}`,
+    "x-ct-organization": "codethreat",
+  }
+})
+.then(response => {
+  console.log(response.data);
+})
+.catch(error => {
+  console.log(error);
 });
 
 
