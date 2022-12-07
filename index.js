@@ -38,7 +38,7 @@ try {
 const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
  console.log("eyyy " + github.context.payload.repository.name);
- console.log("pr " + github.context.payload.head.ref);
+ console.log("pr " + github.context.payload.pull_request.head.ref);
 } catch (error) {
   core.setFailed(error.message);
 }
