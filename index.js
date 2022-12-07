@@ -23,9 +23,22 @@ try {
 //     console.log(data);
 // });
 
+axios
+  .get("https://4ebb-176-236-105-2.eu.ngrok.io/api/users", {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+      "x-ct-organization": "codethreat",
+      "Authorization": `${token1}`
+    },
+  })
+  .then(({data}) => {
+    console.log(data);
+});
+
 
   axios
-  .post("https://501e-78-189-89-238.eu.ngrok.io/integration/github/start", {
+  .post("https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json;charset=UTF-8",
