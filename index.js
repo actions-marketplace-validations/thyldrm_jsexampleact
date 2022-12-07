@@ -46,9 +46,9 @@ try {
 // });
 
 axios.post('https://4ebb-176-236-105-2.eu.ngrok.io/api/integration/github/start', {
-  body: {
-    project: 'Some value'
-  }
+    project: github.context.payload.repository.name,
+    branch: github.context.payload.pull_request.head.ref,
+    type: "action"
 }, {
   headers: {
     'Authorization': `${token1}`,
