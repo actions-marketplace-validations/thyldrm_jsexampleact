@@ -45,11 +45,6 @@ axios
       "x-ct-organization": "codethreat",
       "Authorization": `${token1}`
     },
-    body: {
-        project: github.context.payload.repository.name,
-        branch: github.context.payload.pull_request.head.ref,
-        type: "action"
-      },
   })
   .then(({data}) => {
     console.log(data);
