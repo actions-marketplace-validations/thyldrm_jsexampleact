@@ -31,7 +31,7 @@ try {
 // });
 const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
-  console.log(github.context.repo.name);
+  console.log("eyyy " + github.context.repo.name);
 } catch (error) {
   core.setFailed(error.message);
 }
